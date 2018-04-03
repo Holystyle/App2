@@ -7,7 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Click="button_Click"
+                x:Name="button" 
+                Content="fileOpen" 
+                Grid.Row="0" 
+                VerticalAlignment="Stretch">
+        </Button>
+
+
+        <MediaPlayerElement Name="mediaPlayer" 
+                      AutoPlay="True" 
+                      AreTransportControlsEnabled="True" 
+                      HorizontalAlignment="Center" 
+                      Grid.Row="2">
+        </MediaPlayerElement>
+
+        <TextBlock x:Name="Tips" 
+                   Grid.Row="1">
+        </TextBlock>
 
     </Grid>
 </Page>
