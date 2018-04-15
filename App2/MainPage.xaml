@@ -29,9 +29,30 @@
                       Grid.Row="2">
         </MediaPlayerElement>
 
-        <TextBlock x:Name="Tips" 
-                   Grid.Row="1">
-        </TextBlock>
+            <TextBlock x:Name="Tips" 
+                       Grid.Row="1">
+            </TextBlock>
 
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
+            
+            <TextBox x:Name="source"
+                     Width="150" 
+                     PlaceholderText="Enter your url">
+            </TextBox>
+
+            <Button Click="playOnline_Click"
+                    x:Name="playOnline"
+                    Margin="5,0,0,0"
+                    Content="playOnline">
+            </Button>
+            
+            <Button Click="downLoad_Click"
+                    x:Name="downLoad"
+                    Margin="5,0,0,0"
+                    Content="downLoad">
+            </Button>
+            
+        </StackPanel>
+        
     </Grid>
 </Page>
